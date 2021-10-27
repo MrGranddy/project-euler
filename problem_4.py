@@ -6,6 +6,7 @@ def check_palindrome(s):
     else:
         return False
 
+
 n1 = 999
 n2 = 999
 c = 0
@@ -18,4 +19,4 @@ for n1 in range(999, 99, -1):
         if check_palindrome(str(n)):
             palindromes.add(n)
 
-print(max(palindromes))    
+print(max(palindromes))
