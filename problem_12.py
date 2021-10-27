@@ -20,10 +20,11 @@ def factors(n):
 
     return factors
 
+
 n = 1
 lim = 500
 while 1:
-    t = n * (n+1) // 2
+    t = n * (n + 1) // 2
     f = factors(t)
     m = 1
     for _, val in f.items():
@@ -32,5 +33,5 @@ while 1:
     if m > lim:
         print(t)
         break
-    
+
     n += 1

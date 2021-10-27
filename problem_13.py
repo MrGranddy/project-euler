@@ -107,7 +107,7 @@ digits = digits.strip().splitlines()
 n = []
 r = 0
 for i in range(len(digits[0])):
-    d = [ int(x[-1-i]) for x in digits ]
+    d = [int(x[-1 - i]) for x in digits]
     s = sum(d) + r
     r = s // 10
     n.append(s % 10)
