@@ -26,8 +26,8 @@ w = 4
 
 
 m = 0
-for i in range(len(n)-w):
-    prod = np.prod([int(x) for x in n[i:i+w]])
+for i in range(len(n) - w):
+    prod = np.prod([int(x) for x in n[i : i + w]])
     if prod > m:
         m = prod
 print(m)

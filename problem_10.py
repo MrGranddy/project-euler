@@ -1,7 +1,8 @@
 import numpy as np
 
+
 def find_primes(n):
-    A = np.ones(n+1, dtype="int32")
+    A = np.ones(n + 1, dtype="int32")
     i = 2
     while i <= n ** 0.5:
         if A[i] == 1:
@@ -12,4 +13,5 @@ def find_primes(n):
         i += 1
     return np.where(A == 1)[0][2:]
 
-print( np.sum(find_primes(int(2e6))) )
+
+print(np.sum(find_primes(int(2e6))))
