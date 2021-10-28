@@ -5,6 +5,7 @@ class Node:
         self.left = None
         self.right = None
 
+
 pyramid = """
 75
 95 64
@@ -23,20 +24,21 @@ pyramid = """
 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23
 """
 
-pyramid = [ [int(x) for x in line.strip().split()] for line in  pyramid.strip().splitlines()]
+pyramid = [
+    [int(x) for x in line.strip().split()] for line in pyramid.strip().splitlines()
+]
 
 
 for i in range(1, len(pyramid)):
 
-    pyramid[i][0] += pyramid[i-1][0]
-    pyramid[i][-1] += pyramid[i-1][-1]
+    pyramid[i][0] += pyramid[i - 1][0]
+    pyramid[i][-1] += pyramid[i - 1][-1]
 
-    for j in range(1,len(pyramid[i])-1):
+    for j in range(1, len(pyramid[i]) - 1):
 
-        l = pyramid[i-1][j-1]
-        r = pyramid[i-1][j]
+        l = pyramid[i - 1][j - 1]
+        r = pyramid[i - 1][j]
 
         pyramid[i][j] += max([l, r])
 
 print(max(pyramid[-1]))
-        
