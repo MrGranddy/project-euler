@@ -10,7 +10,7 @@ for i in range(exp):
 
     r = 0
     for j in range(len(n)):
-        s = 2 * n[-1-j] + r
+        s = 2 * n[-1 - j] + r
         r = s // 10
         new_n.append(s % 10)
 
@@ -18,5 +18,5 @@ for i in range(exp):
         n = [int(x) for x in str(r)] + new_n[::-1]
     else:
         n = new_n[::-1]
-    
+
 print(sum(n))

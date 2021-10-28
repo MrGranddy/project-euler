@@ -6,10 +6,9 @@ def fact(x):
         return 1
     if x in mem:
         return mem[x]
-    mem[x] = x * fact(x - 1)
+    mem[x] = fact(x - 1) * x
     return mem[x]
 
 
-h, w = (20, 20)
-
-print(fact(h + w) // (fact(h) * fact(w)))
+n = 100
+print(sum(map(int, str(fact(n)))))
