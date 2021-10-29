@@ -1,5 +1,6 @@
 fact_mem = {}
 
+
 def fact(x):
     if x == 0:
         return 1
@@ -19,8 +20,9 @@ def find(n, digits, acc):
         n - d * fact(len(digits) - 1), digits[:d] + digits[d + 1 :], [digits[d]] + acc
     )
 
+
 n = int(1e6)
 num_d = 10
 digits = [i for i in range(num_d)]
 
-print("".join(str(x) for x in find(n-1, digits, [])))
+print("".join(str(x) for x in find(n - 1, digits, [])))
