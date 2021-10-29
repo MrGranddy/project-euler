@@ -2,6 +2,7 @@ import math
 
 mem = {}
 
+
 def fibo(x):
 
     if x < 3:
@@ -9,8 +10,9 @@ def fibo(x):
     if x in mem:
         return mem[x]
 
-    mem[x] = fibo(x-1) + fibo(x-2)
+    mem[x] = fibo(x - 1) + fibo(x - 2)
     return mem[x]
+
 
 d = 1000
 
