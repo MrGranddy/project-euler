@@ -1,6 +1,7 @@
 from functools import cache, reduce
 import itertools
 
+@cache
 def fact(x):
     if x == 0:
         return 1
